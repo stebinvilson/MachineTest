@@ -12,6 +12,7 @@ import android.util.Log
 import android.view.Gravity
 import android.view.Window
 import android.view.WindowManager
+import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.room.Room
 import com.restoo.machinetest.*
@@ -42,7 +43,7 @@ class MainActivityHelper(
         ) {
             showProgress()
             val service: ApiInterface? = getRetrofitObject()?.create(ApiInterface::class.java)
-            var call: Call<List<Apod>?>? = service?.fetch("DEMO_KEY", 10)
+            var call: Call<List<Apod>?>? = service?.fetch("oEp1krlWgJHWcSjq3tUx6pGK7iQtHBjOJQYCle3V", 10)
             call?.enqueue(object : Callback<List<Apod>?> {
                 override fun onResponse(call: Call<List<Apod>?>, response: Response<List<Apod>?>) {
                     //  closeProgress()
@@ -54,6 +55,7 @@ class MainActivityHelper(
                     } else {
                         closeProgress()
                         listner.onfail()
+
                     }
                 }
 
