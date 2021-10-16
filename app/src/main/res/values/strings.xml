@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">MachineTest</string>
+    <string name="apod_listing">APOD Listing</string>
+    <string name="apoddata">ApodData</string>
+    <string name="apod_details">APOD Details</string>
+</resources>
